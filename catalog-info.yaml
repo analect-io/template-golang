@@ -15,19 +15,19 @@ metadata:
     prometheus.io/rule: container_cpu_usage_seconds_total{namespace=${{values.component_id | dump}}}
     prometheus.io/alert: all
   links:
-    - url: https://${{values.component_id}}.diegoluisi.eti.br
+    - url: https://${{values.component_id}}.analect.com
       title: Website
       icon: Website
-    - url: https://grafana.diegoluisi.eti.br/
+    - url: https://grafana.analect.com/
       title: Dashboard
       icon: dashboard
-    - url: https://alerts.diegoluisi.eti.br/
+    - url: https://alerts.analect.com/
       title: Alerts
       icon: alert
-    - url: https://argocd.diegoluisi.eti.br/applications/${{values.env + "-" + values.component_id}}?resource=
+    - url: https://argocd.analect.com/applications/${{values.env + "-" + values.component_id}}?resource=
       title: ArgoCD
       icon: cloud
-    - url: https://grafana.diegoluisi.eti.br/d/k8s_views_ns/kubernetes-views-namespaces?orgId=1&refresh=30s&var-datasource=Prometheus&var-namespace=${{values.component_id}}&var-resolution=30s
+    - url: https://grafana.analect.com/d/k8s_views_ns/kubernetes-views-namespaces?orgId=1&refresh=30s&var-datasource=Prometheus&var-namespace=${{values.component_id}}&var-resolution=30s
       title: Logs
       icon: cloud
   tags:
