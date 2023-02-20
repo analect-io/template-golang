@@ -87,7 +87,7 @@ jobs:
           push: true
           secrets: |
             GIT_AUTH_TOKEN=${{ '${{ github.token }}' }}
-          tags: ghcr.io/analect/${{values.component_id}}:${{ '${{ needs.vars.outputs.tag }}' }},ghcr.io/analect/${{values.component_id}}:latest
+          tags: ghcr.io/analect-io/${{values.component_id}}:${{ '${{ needs.vars.outputs.tag }}' }},ghcr.io/analect-io/${{values.component_id}}:latest
 
   trivy:
     name: Trivy Scan 🔒
@@ -101,7 +101,7 @@ jobs:
       - name: Run Trivy vulnerability scanner 🔎
         uses: aquasecurity/trivy-action@master
         with:
-          image-ref: ghcr.io/analect/${{values.component_id}}:${{ '${{ needs.vars.outputs.tag }}' }}
+          image-ref: ghcr.io/analect-io/${{values.component_id}}:${{ '${{ needs.vars.outputs.tag }}' }}
           format: 'sarif'
           output: 'trivy-results.sarif'
 
