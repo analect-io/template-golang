@@ -1,8 +1,8 @@
 package main
 
 import (
-	_ "github.com/analect/${{values.component_id}}/config"
-	"github.com/analect/${{values.component_id}}/controllers"
+	_ "github.com/analect-io/${{values.component_id}}/config"
+	"github.com/analect-io/${{values.component_id}}/controllers"
 	"github.com/gin-gonic/gin"
 )
 

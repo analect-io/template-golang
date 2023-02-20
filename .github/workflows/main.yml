@@ -127,7 +127,7 @@ jobs:
         kustomize-version: "3.9.4"
 
     - name: GitOps Checkout 🛎️
-      run: git clone https://${REPO_TOKEN}@github.com/analect/gitops.git .
+      run: git clone https://${REPO_TOKEN}@github.com/analect-io/gitops.git .
       env:
         REPO_TOKEN: ${{ '${{secrets.ACCESS_TOKEN_GITHUB}}' }}
 
@@ -143,7 +143,7 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git commit -am ":robot: [GitHub Action] Set new image tag to https://github.com/analect/${{values.component_id}}/commit/${{ '${{ needs.vars.outputs.tag }}' }}"
+        git commit -am ":robot: [GitHub Action] Set new image tag to https://github.com/analect-io/${{values.component_id}}/commit/${{ '${{ needs.vars.outputs.tag }}' }}"
         git push
 
   slack-workflow-status:

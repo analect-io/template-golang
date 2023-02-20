@@ -1,4 +1,4 @@
-module github.com/analect/${{values.component_id}}
+module github.com/analect-io/${{values.component_id}}
 
 go 1.18
 

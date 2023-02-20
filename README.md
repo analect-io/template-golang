@@ -16,6 +16,6 @@ We ❤️ contributions big or small. [See our guide](contributing.md) on how to
 
 ### Thanks to all our contributors!
 
-<a href="https://github.com/analect/${{values.component_id}}/graphs/contributors">
+<a href="https://github.com/analect-io/${{values.component_id}}/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=analect/${{values.component_id}}" />
 </a>
