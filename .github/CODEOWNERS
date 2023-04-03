@@ -1,3 +1,3 @@
+* @analect-io/${{values.repo_owner}}
 .github/* @analect-io/sre-team
 liquibase/* @analect-io/dba-team
-* @analect-io/${{values.owner}}

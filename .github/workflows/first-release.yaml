@@ -1,4 +1,4 @@
-name: first-release
+name: First Release 🌱
 
 on:
   workflow_dispatch:
@@ -34,7 +34,10 @@ jobs:
 
   security-gateway:
     uses: analect-io/.github/.github/workflows/trivy.yaml@main
+    with:
+      tag: ${{ needs.env.outputs.tag }}
     needs:
+      - env
       - build-and-push
 
   deploy:
